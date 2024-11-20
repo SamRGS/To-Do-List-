@@ -1,3 +1,12 @@
+#Funcionalidades:
+# - Campo de entrada para digitar a tarefa e botão para adicionar à lista.
+# - Botão que remove a tarefa selecionada.
+# - Botão que marca a tarefa como concluída, destacando-a na lista.
+#Avaliação:
+# - Botões executam suas funções sem erros.
+# - Layout claro e fácil de usar.
+# - Mensagem para operações inválidas (ex: remover sem seleção).
+
 #Importando biblioteca 
 from tkinter import *
 from tkinter import messagebox
@@ -55,7 +64,7 @@ def concluirtask():
     except IndexError:
         # Mostra uma mensagem de aviso caso nenhuma tarefa esteja selecionada
         messagebox.showwarning("Aviso", "Selecione uma tarefa para concluir!")
-        
+
 #Titulo da pagina 
 labelTitle = Label(todolist, text = "GERENCIADOR DE TAREFAS", font = ("Arial", 15), width = 50, bg = "#8092FA", background = '#9ECBE5', pady = 20)
 
